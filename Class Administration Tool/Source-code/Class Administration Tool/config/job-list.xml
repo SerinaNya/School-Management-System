@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<list>
+  <chi>
+    <job>s</job>
+    <job>d</job>
+    <job>d</job>
+    <job>s</job>
+    <job>g</job>
+    <job>v</job>
+  </chi>
+  <math>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+  </math>
+  <eng>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+  </eng>
+  <other>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+    <job></job>
+     </other>
+</list>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<boot>
+  <user>63</user>
+  <status>author</status>
+  <ping>\\192.168.1.111\server\63</ping>
+    <jail>\\192.168.1.111\jail\63.jail</jail>
+ </boot>

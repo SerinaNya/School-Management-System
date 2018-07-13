@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<boot>
+    <update>\\ADMIN-PCZZM\Server\Update\install61.exe</update>
+  <!-- \\192.168.1.111\server\update\install.exe -->
+</boot>

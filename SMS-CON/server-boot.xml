@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<boot>
+  <user>63</user>
+  <status>author</status>
+  <server>\\192.168.1.111\server\63</server>
+  <update>\\192.168.1.111\server\update\update.xml</update>
+  <job>\\192.168.1.111\job\63.mht</job>
+  <curr>\\192.168.1.111\curriculum\63.xml</curr>
+  <jail>\\192.168.1.111\jail\63.jail</jail>
+  <!--<update>\\192.168.1.111\server\update\update.xml</update>-->
+</boot>
