@@ -3,6 +3,7 @@ Public Class jail
 
     Dim c As String
     Dim k As String = Chr(13) & Chr(10) & "--------------------------------------------"
+    Public bootxml As New XmlDocument
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         TextBox1.Clear()
@@ -79,15 +80,18 @@ Public Class jail
     End Function
 
     Private Sub pingserver()
-        If My.Computer.FileSystem.DirectoryExists("\\10.75.35.106\server") = False Then
+        Dim xboot As New XmlDocument
+        xboot.Load(Application.StartupPath & "\config\server-boot.xml")
+        If My.Computer.FileSystem.DirectoryExists(xboot.SelectSingleNode("boot").SelectSingleNode("jailx").InnerText) = False Then
             statusdot(False)
         Else
             statusdot(True)
         End If
     End Sub
 
-    Private Sub jail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub jail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call pingserver()
+        ' bootxml As New XmlDocument
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
@@ -98,7 +102,7 @@ Public Class jail
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''boot''''''''''''''''''''''''''''''''''''''''
 
-    Public bootxml As New XmlDocument
+
     Public xmlread As String
     Public xmlwrite As String
     Public Sub funcxmlLOAD() Handles MyBase.Load
@@ -112,4 +116,8 @@ Public Class jail
         xmlwrite = bootxml.SelectSingleNode(a).SelectSingleNode(b).InnerText(w)
         Return xmlwrite
     End Function
+
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

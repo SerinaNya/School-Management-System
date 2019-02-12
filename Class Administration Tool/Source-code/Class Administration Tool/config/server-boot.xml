@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <boot>
-  <user>63</user>
+  <user>73</user>
   <status>author</status>
-  <server>\\10.75.35.106\Server</server>
+  <server>E:\SMS</server>
   <update>none</update>
-  <job>\\ADMIN-PCZZM\Server\job\63.mht</job>
-  <curr>\\ADMIN-PCZZM\Server\curr\63.xml</curr>
-  <jail>\\ADMIN-PCZZM\Server\jail\63.jail</jail>
+  <job>file:///E:/SMS/Job/73.html</job>
+  <word>E:\SMS\bat\word.lnk</word>
+  <curr>E:\SMS\curr\73.xml</curr>
+  <jailx>E:\SMS\jail\63.jail</jailx>
   <!--<update>\\10.75.35.106\Server\update\update.xml</update>-->
 </boot>

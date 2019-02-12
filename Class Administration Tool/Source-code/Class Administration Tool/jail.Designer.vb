@@ -40,6 +40,7 @@ Partial Class jail
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -115,7 +116,7 @@ Partial Class jail
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.server, Me.ToolStripSeparator1, Me.ComboBox1, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ToolStripButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.server, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ComboBox1, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(411, 25)
@@ -138,7 +139,7 @@ Partial Class jail
         '
         Me.ComboBox1.Items.AddRange(New Object() {"遭人举报：", "语文课", "数学课", "英语课", "课间", "自习课", "上课话多", "大吼大叫", "头向后转", "影响同学", "离开座位", "发出怪声音", "做怪异动作", "上课不认真听讲", "眼保健操不认真做", "表扬 ", "$侮辱同学$", "$欺负同学$", "&说脏话&", "&$骂人$&"})
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(100, 25)
         Me.ComboBox1.Text = "快速罪行选择器"
         '
         'ToolStripSeparator2
@@ -174,6 +175,12 @@ Partial Class jail
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "启动屏幕键盘"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(99, 22)
+        Me.ToolStripLabel1.Text = "ToolStripLabel1"
         '
         'jail
         '
@@ -218,4 +225,5 @@ Partial Class jail
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
 End Class

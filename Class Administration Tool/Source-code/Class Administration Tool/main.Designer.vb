@@ -61,6 +61,7 @@ Partial Class main
         Me.SoundPlayer = New AxWMPLib.AxWindowsMediaPlayer()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -221,6 +222,7 @@ Partial Class main
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(78, 20)
         Me.ComboBox1.TabIndex = 1
+        Me.ComboBox1.Visible = False
         '
         'Label3
         '
@@ -285,7 +287,7 @@ Partial Class main
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Image = Global.CAT.My.Resources.Resources.lock
         Me.PictureBox4.Location = New System.Drawing.Point(135, 100)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(68, 57)
@@ -360,6 +362,7 @@ Partial Class main
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 16
         Me.PictureBox6.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox6, "开启Lantern代理")
         '
         'main
         '
@@ -388,7 +391,7 @@ Partial Class main
         Me.MinimizeBox = False
         Me.Name = "main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Class Administration Tool"
+        Me.Text = "Class Administration Tool 3"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -440,5 +443,6 @@ Partial Class main
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents 启动Commit功能ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DebugToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 
 End Class

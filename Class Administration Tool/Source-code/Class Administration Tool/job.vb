@@ -5,7 +5,7 @@ Public Class job
     Dim desktop As String = "C:\Users\" & Environment.UserName & "\Desktop"
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WebBrowser1.Navigate(ReadXML("boot", "job"))
-        
+
         Call pingserver()
         'F5
         WebBrowser1.Focus()
@@ -47,7 +47,7 @@ Public Class job
 
 
     Private Sub 刷新ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 刷新ToolStripMenuItem.Click
-        If server.Text = "无法连接到服务器10.75.35.106" Then
+        If server.Text = "无法连接到本地服务端" Then
 
         End If
         WebBrowser1.Focus()
@@ -57,18 +57,18 @@ Public Class job
     Private Function statusdot(ByVal okay As Boolean)
         If okay = False Then
             'server.Image = Image.FromFile("\\192.168.1.111\server\dots\red.png")
-            server.Text = "无法连接到服务器10.75.35.106"
+            server.Text = "无法连接到本地服务端"
         Else
-            server.Image = Image.FromFile("\\10.75.35.106\server\dots\green.png")
-            server.Text = "服务器连接正常"
-            RESLOCAL.Text = "资源本地化已关闭"
-            RESLOCAL.Image = Image.FromFile("\\10.75.35.106\server\dots\red.png")
+            server.Image = Image.FromFile("E:\SMS\IMG\green.png")
+            server.Text = "服务端连接正常"
+            RESLOCAL.Text = "资源远程化已关闭"
+            RESLOCAL.Image = Image.FromFile("E:\SMS\IMG\red.png")
         End If
         Return okay
     End Function
 
     Private Sub pingserver()
-        If My.Computer.FileSystem.DirectoryExists("\\10.75.35.106\server") = False Then
+        If My.Computer.FileSystem.DirectoryExists("E:\SMS") = False Then
             statusdot(False)
         Else
             statusdot(True)
@@ -97,8 +97,11 @@ Public Class job
         Return bootxml.SelectSingleNode(a).SelectSingleNode(b).InnerText(w)
     End Function
 
-   
+
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-        System.Diagnostics.Process.Start(ReadXML("boot", "job"))
+        System.Diagnostics.Process.Start(ReadXML("boot", "word"))
+        ' ''System.Diagnostics.Process.Start("C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE E:\SMS\Job\73.html")
     End Sub
+
+
 End Class

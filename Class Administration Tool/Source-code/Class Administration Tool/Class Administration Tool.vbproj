@@ -56,7 +56,7 @@
     <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>
@@ -65,7 +65,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Tool_box_Red_128px_554971_easyicon.net.ico</ApplicationIcon>
+    <ApplicationIcon>board.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>A6B7EFB2E50FEAA598CCB6C03AF1E769DEE29B29</ManifestCertificateThumbprint>
@@ -77,7 +77,7 @@
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -216,6 +216,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="board.ico" />
     <Content Include="config\job-list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -236,6 +237,7 @@
     <None Include="Resources\LOGO.png" />
     <None Include="Resources\red.png" />
     <None Include="Resources\update.jpg" />
+    <None Include="Resources\lock.png" />
     <Content Include="Tool_box_Red_128px_554971_easyicon.net.ico" />
   </ItemGroup>
   <ItemGroup>

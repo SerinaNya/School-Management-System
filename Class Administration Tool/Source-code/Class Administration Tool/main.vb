@@ -43,6 +43,7 @@ Public Class main
         version.Text = Application.ProductName & " " & Application.ProductVersion
         Call pingserver()
         Call up()
+        Label2.Left = Me.Width / 2 - Label2.Width / 2
     End Sub
 
     Public Function statusdot(ByVal okay As Boolean)
@@ -53,7 +54,7 @@ Public Class main
             ComboBox1.Cursor = Cursors.No
             sersta = False
         Else
-            server.Image = Image.FromFile("\\10.75.35.106\server\dots\green.png")
+            server.Image = Image.FromFile("E:\SMS\IMG\green.png")
             server.Text = "正常"
             bootxml.Load(Application.StartupPath & "\config\server-boot.xml")
             xmlDoc.Load(ReadXML("boot", "curr"))
@@ -72,8 +73,8 @@ Public Class main
             noticetext = "即将重启应用程序……"
         End If
     End Sub
-    
-    
+
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim wdn As String = Weekday(Date.FromOADate(Today.ToOADate()))
@@ -93,6 +94,11 @@ Public Class main
 
     Private Sub Button3_Click(sender As Object, e As EventArgs)
         End
+    End Sub
+
+    Private Sub ComboBox1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseDoubleClick
+        ComboBox1.Visible = False
+
     End Sub
 
 
@@ -153,23 +159,23 @@ Public Class main
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("m").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "7:55:00" Then
+        ElseIf TimeOfDay = "8:02:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("m1").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "8:55:00" Then
+        ElseIf TimeOfDay = "8:42:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("m2").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "9:45:00" Then
+        ElseIf TimeOfDay = "9:58:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("m3").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "10:40:00" Then
+        ElseIf TimeOfDay = "10:53:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("m4").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "11:30:00" Then
+        ElseIf TimeOfDay = "11:42:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("n").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
@@ -177,28 +183,24 @@ Public Class main
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("a1").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "13:40:00" Then
+        ElseIf TimeOfDay = "13:42:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("a2").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "14:35:00" Then
+        ElseIf TimeOfDay = "14:38:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("a3").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "15:30:00" Then
+        ElseIf TimeOfDay = "15:33:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("a4").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
-        ElseIf TimeOfDay = "16:20:00" Then
+        ElseIf TimeOfDay = "16:21:00" Then
             Me.Show()
             Label2.Text = xmlDoc.SelectSingleNode("win").SelectSingleNode(WeekdayName(wdn)).SelectSingleNode("i").InnerText
             SoundPlayer.URL = Application.StartupPath & "\config\sound.wav"
         End If
-        If directserver = True Then
-            If TimeOfDay = "07:45:00" Then
-                notice.ShowDialog()
-            End If
-        End If
+       
     End Sub
 
     Private Sub ComboBox1_TextChanged(sender As Object, e As KeyPressEventArgs) Handles ComboBox1.KeyPress
@@ -226,7 +228,7 @@ Public Class main
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         job.Show()
     End Sub
-    
+
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''新版验证
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         If InputBox("请输入管理员密码", "管理员") = "74269" Then jail.Show()
@@ -249,7 +251,7 @@ Public Class main
     End Sub
 
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
-        System.Diagnostics.Process.Start("https://jinzhijie.github.io/index.html")
+        System.Diagnostics.Process.Start("https://bilibili.com")
     End Sub
 
 
@@ -296,12 +298,12 @@ Public Class main
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        Dim pa As String = "C:\Users\" & Environment.UserName & "\AppData\Local\GeoGebra_Geometry\app-6.0.438\GeoGebraGeometry.exe"
+        Dim pa As String = "https://www.geogebra.org/geometry?from=SMS"
         System.Diagnostics.Process.Start(pa)
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        Dim pa As String = "C:\Users\" & Environment.UserName & "\AppData\Local\GeoGebra_Graphing\app-6.0.400\GeoGebraGraphing.exe"
+        Dim pa As String = "C:\Users\1h\AppData\Roaming\Lantern\lantern.exe"
         System.Diagnostics.Process.Start(pa)
     End Sub
 
@@ -315,5 +317,9 @@ Public Class main
 
     Private Sub DebugToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DebugToolStripMenuItem.Click
         notice.Show()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.MouseDoubleClick
+        ComboBox1.Visible = True
     End Sub
 End Class

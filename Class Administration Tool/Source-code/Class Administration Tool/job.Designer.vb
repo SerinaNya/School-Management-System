@@ -25,11 +25,11 @@ Partial Class job
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(job))
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.截图ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.刷新ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.server = New System.Windows.Forms.ToolStripMenuItem()
         Me.RESLOCAL = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,6 +51,12 @@ Partial Class job
         Me.MenuStrip1.Size = New System.Drawing.Size(1184, 25)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(44, 21)
+        Me.ToolStripMenuItem1.Text = "编辑"
         '
         '截图ToolStripMenuItem
         '
@@ -77,12 +83,6 @@ Partial Class job
         Me.RESLOCAL.Name = "RESLOCAL"
         Me.RESLOCAL.Size = New System.Drawing.Size(132, 21)
         Me.RESLOCAL.Text = "资源本地化已启用"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(44, 21)
-        Me.ToolStripMenuItem1.Text = "编辑"
         '
         'job
         '
